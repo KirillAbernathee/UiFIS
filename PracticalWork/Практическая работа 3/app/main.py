@@ -15,17 +15,16 @@ def calculate():
             messagebox.showerror("Ошибка", "Время t должно быть > 0")
             return
         
-        # Экспоненциальный закон: P(t) = exp(-λ*t)
-        # λ = -ln(P(t)) / t
+
         lambda_val = -math.log(P) / t
         
-        # Среднее время безотказной работы: T_cp = 1 / λ
+
         T_cp = 1 / lambda_val
         
-        # Частота отказов a(t) = λ * exp(-λ*t) = λ * P(t)
+
         a_t = lambda_val * P
         
-        # Вывод результатов
+
         result_text = (
             f"Результаты расчёта:\n"
             f"Вероятность безотказной работы P(t) = {P:.4f}\n"
